@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+body{
+    padding:0;
+    margin:0;
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo{
+    width:35px;
+    height:35px;
+    border: 2px solid rgba(255,0,0,0.9);
+    background-color:  rgba(255,0,0,0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 5px #ff0000,
+                0 0 25px #ff0000,
+                0 0 50px #ff0000,
+                0 0 200px #ff0000;
+    
+    padding:0;
+}
+.TitleLogo{
+    margin-left: -5px;
+    margin-top: -35px;
+    text-align:center;
+    padding: 4px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: gainsboro;
+    font-weight: bold;
+}
+.TitleLogo:hover{
+    color: black;
+    background-color: rgba(255,0,0,0.7);
+    border:1px solid rgba(255,0,0,0.7);
+    box-shadow: 0 0 5px #ff0000,
+                0 0 25px #ff0000,
+                0 0 50px #ff0000,
+                0 0 200px #ff0000;
+
+}
+.navbar .nav-item{
+    text-align:center;
+    margin:auto;
+    padding-left:30px;
+    padding-right:30px;
+}
+.navbar .nav-item:hover{
+    text-align: center;
+    background-color: rgba(255,0,0,0.4);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #ff0000,
+                0 0 25px #ff0000,
+                0 0 50px #ff0000,
+                0 0 200px #ff0000;
+}
+.navbar .nav-item .dropdown-menu {
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 20px;
+    color: gainsboro;
+    padding:5px;
+}
+.dropdown-item{
+    border: 2px solid rgba(255,0,0,0.6);
+    border-radius: 50px;
+    margin:2px;
+    color: gainsboro;
+    padding:3px;
+    text-align: center;
+}
+.navbar .nav-item .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255,0,0,0.4);
+    color: gainsboro;
+}
+.text-span{
+    font-size: 10px;
+}
+.slider{
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.sliderDiv img{
+    width: 100vw;
+    height: 100vh;
+    position:relative;
+    margin: 0;
+    padding:0;
+    opacity: .55;
+     
+}
+.text-home{
+    position:sticky;
+    left:33%;
+    z-index: 99;
+    text-align:center;
+    font-weight: bolder;
+    height: 0px;
+    
+    top: 40%;
+}
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}	
+/* ============ desktop view .end// ============ */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .sliderDiv img{
+      height: 100%;
+  }
+  .text-home{
+      left:15%;
+      top: 30%;
+  }
+  .text-home h1 {
+      font-size: 16px;
+  }
+  .text-home h3{
+      font-size: 12px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
